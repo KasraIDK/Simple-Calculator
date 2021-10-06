@@ -29,7 +29,7 @@ public class core {
                 double result = input1double / input2double;
                 System.out.println("Result: " + result);
             }
-            default -> System.out.println("That operation is not supported, please try again");
+            default -> System.out.println("That operation is not supported, please try again.");
         }
     }
 }
