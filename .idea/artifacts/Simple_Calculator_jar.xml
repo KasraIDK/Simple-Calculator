@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Simple Calculator:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Simple_Calculator_jar</output-path>
+    <root id="archive" name="Simple Calculator.jar">
+      <element id="module-output" name="Simple Calculator" />
+    </root>
+  </artifact>
+</component>
