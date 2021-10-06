@@ -12,24 +12,17 @@ public class core {
         System.out.println("Please state what to do with the inputted numbers");
         System.out.println("Current possible operations are: Add(+), Subtract(-), Multiply(*), Divide(/)");
         String operationstr = operation.nextLine();
+        double result;
         switch (operationstr) {
-            case "Add", "+", "add" -> {
-                double result = input1double + input2double;
-                System.out.println("Result: " + result);
+            case "Add", "+", "add" -> result = input1double + input2double;
+            case "Subtract", "-", "subtract" -> result = input1double - input2double;
+            case "Multiply", "*", "multiply" -> result = input1double * input2double;
+            case "Divide", "/", "divide" -> result = input1double / input2double;
+            default -> {
+                System.out.println("That operation is not supported, please try again.");
+                return;
             }
-            case "Subtract", "-", "subtract" -> {
-                double result = input1double - input2double;
-                System.out.println("Result: " + result);
-            }
-            case "Multiply", "*", "multiply" -> {
-                double result = input1double * input2double;
-                System.out.println("Result: " + result);
-            }
-            case "Divide", "/", "divide" -> {
-                double result = input1double / input2double;
-                System.out.println("Result: " + result);
-            }
-            default -> System.out.println("That operation is not supported, please try again.");
         }
+        System.out.println("Result: " + result);
     }
 }
