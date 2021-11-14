@@ -12,7 +12,6 @@ public class core {
         Scanner operation = new Scanner(System.in);
         String operationstr = operation.nextLine();
         double result;
-        double leftover;
         switch (operationstr) {
             case "Add", "+", "add" -> result = input1double + input2double;
             case "Subtract", "-", "subtract" -> result = input1double - input2double;
