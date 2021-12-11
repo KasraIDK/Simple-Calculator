@@ -21,17 +21,20 @@ public class core {
             case "Divide", "/", "divide" -> result = input1double / input2double;
             case "Raise", "^", "raise" -> result = Math.pow(input1double, input2double);
             case "Root", "//", "root", "nth root", "Nth Root" -> {
+                //if (input1double < 0) {
+
+                //}
                 double n = 1/input2double;
                 result = Math.round(Math.pow(input1double, n));
             }
-            case "gcd", "GCD", "gcf", "GCF" -> {
+            /*case "gcd", "GCD", "gcf", "GCF" -> {
                 int input1int = (int) input1double;
                 int input2int = (int) input2double;
                 int prime;
                 int number;
                 int test = (int) Math.pow(25, 0.5);
                 result = test;
-            }
+            }*/
             default -> {
                 System.out.println("That operation is not supported, please try again.");
                 return;
