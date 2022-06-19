@@ -1,3 +1,4 @@
+import java.util.Locale;
 import java.util.Scanner;
 
 public class core {
@@ -14,20 +15,20 @@ public class core {
         Scanner operation = new Scanner(System.in);
         String operationstr = operation.nextLine();
         double result;
-        switch (operationstr) {
-            case "Add", "+", "add" -> result = input1double + input2double;
-            case "Subtract", "-", "subtract" -> result = input1double - input2double;
-            case "Multiply", "*", "multiply" -> result = input1double * input2double;
-            case "Divide", "/", "divide" -> result = input1double / input2double;
-            case "Raise", "^", "raise" -> result = Math.pow(input1double, input2double);
-            case "Root", "//", "root", "nth root", "Nth Root" -> {
-                //if (input1double < 0) {
+        switch (operationstr.toLowerCase(Locale.ROOT)) {
+            case "+", "add" -> result = input1double + input2double;
+            case "-", "subtract" -> result = input1double - input2double;
+            case "*", "multiply" -> result = input1double * input2double;
+            case "/", "divide" -> result = input1double / input2double;
+            case "^", "raise" -> result = Math.pow(input1double, input2double);
+            /*case "Root", "//", "root", "nth root", "Nth Root" -> {
+                if (input1double < 0) {
 
-                //}
+                }
                 double n = 1/input2double;
                 result = Math.round(Math.pow(input1double, n));
             }
-            /*case "gcd", "GCD", "gcf", "GCF" -> {
+            case "gcd", "GCD", "gcf", "GCF" -> {
                 int input1int = (int) input1double;
                 int input2int = (int) input2double;
                 int prime;
