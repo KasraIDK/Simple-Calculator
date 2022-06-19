@@ -14,33 +14,33 @@ public class core {
         System.out.println("†† N = Your second input");
         Scanner operation = new Scanner(System.in);
         String operationstr = operation.nextLine();
-        double result;
-        switch (operationstr.toLowerCase(Locale.ROOT)) {
-            case "+", "add" -> result = input1double + input2double;
-            case "-", "subtract" -> result = input1double - input2double;
-            case "*", "multiply" -> result = input1double * input2double;
-            case "/", "divide" -> result = input1double / input2double;
-            case "^", "raise" -> result = Math.pow(input1double, input2double);
-            /*case "Root", "//", "root", "nth root", "Nth Root" -> {
-                if (input1double < 0) {
+        try {
+            double result = switch (operationstr.toLowerCase(Locale.ROOT)) {
+                case "+", "add" -> input1double + input2double;
+                case "-", "subtract" -> input1double - input2double;
+                case "*", "multiply" -> input1double * input2double;
+                case "/", "divide" -> input1double / input2double;
+                case "^", "raise" -> Math.pow(input1double, input2double);
+                /*case "Root", "//", "root", "nth root", "Nth Root" -> {
+                    if (input1double < 0) {
 
+                    }
+                    double n = 1/input2double;
+                    result = Math.round(Math.pow(input1double, n));
                 }
-                double n = 1/input2double;
-                result = Math.round(Math.pow(input1double, n));
-            }
-            case "gcd", "GCD", "gcf", "GCF" -> {
-                int input1int = (int) input1double;
-                int input2int = (int) input2double;
-                int prime;
-                int number;
-                int test = (int) Math.pow(25, 0.5);
-                result = test;
-            }*/
-            default -> {
-                System.out.println("That operation is not supported, please try again.");
-                return;
-            }
+                case "gcd", "GCD", "gcf", "GCF" -> {
+                    int input1int = (int) input1double;
+                    int input2int = (int) input2double;
+                    int prime;
+                    int number;
+                    int test = (int) Math.pow(25, 0.5);
+                    result = test;
+                }*/
+                default -> throw new Exception();
+            };
+            System.out.println("Result: " + result);
+        } catch (Exception e) {
+            System.out.println("That operation is not supported, please try again.");
         }
-        System.out.println("Result: " + result);
     }
 }
